@@ -1,30 +1,15 @@
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.Reader;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 
-import org.yaml.snakeyaml.*;
-
-
-//class ValueComparator implements Comparator<Entry<String, List<Appointment>>> {
-//	public int compare(Entry<String, List<Appointment>> a1, Entry<String, List<Appointment>> a2) {
-//		return a1.getValue().get(0).compareTo(a2.getValue().get(1));
-//	}
-//}
-
+import org.yaml.snakeyaml.Yaml;
 
 public class DaysheetGenerator {
 	@SuppressWarnings("unchecked")
@@ -41,10 +26,7 @@ public class DaysheetGenerator {
 		try {
 			// pass yaml file into the reader to create a new instance of the YAML file for output
 			reader = new FileReader(fileName);
-			
-			// create a new instantiation of the appointments object which has a list of appointment objects embedded into it
-			Appointments apptList = new Appointments();
-			
+
 			// The YAML file is based as a key value pair.  For ordering, a Linked Hash Map is a map type that is adds to it as
 			// the values come in as opposed to a Hash Map which sorts it all over the place.  In this case, we will use a Linked Hash Map
 			// to store the values appropriately.
@@ -72,7 +54,6 @@ public class DaysheetGenerator {
 		}
 		// if file cannot be found, print exception
 		catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			System.out.println("Could not find yaml file " + e);
 			
 			e.printStackTrace();

@@ -19,6 +19,11 @@ public class Appointment implements Comparable<Appointment> {
 		catch(ParseException pex) {
 			/* Have you seen this? Does this look wrong to you?
 			 * Let me know your thoughts at the end of the test!
+			 * 
+			 * Nathan Rajkumar : Honestly, I didn't find anything wrong with this.
+			 * 
+			 * The only thing that I could be picky about is if there were any parse 
+			 * errors it could be written to a log file instead of just printing to a console.
 			 */
 			pex.printStackTrace();
 		}
