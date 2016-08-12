@@ -1,0 +1,17 @@
+appointments:
+  - date: 2016-06-01
+    time: 12:30
+    patient: Jamie Skitch
+    reason: Failed test
+  - date: 2016-06-01
+    time: 11:50
+    patient: John Blackwood
+    reason: Bruised ego
+  - date: 2016-06-01
+    time: 14:00
+    patient: Avinach Dinoo
+    reason: 3 months pregnant
+  - date: 2016-05-31
+    time: 11:00
+    patient: Brad Smith
+    reason: Recurring backpain
