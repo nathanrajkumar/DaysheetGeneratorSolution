@@ -45,9 +45,6 @@ public class DaysheetGenerator {
 			
 			Collections.sort(appointments.getAppointments());  
 						
-			// sort the date within the value in the key value pair
-			//System.out.println(list.sort);
-			
 			// print list
 			System.out.println(appointments.getAppointments());
 			
